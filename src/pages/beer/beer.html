@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Random Beer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>Welcome to our random beer app!</h3>
+
+  <p>
+    This application is to learn ionic with funny mobil app and to know some new beer.
+  </p>
+  <p>
+    Never forget "Boire de l'alcool est dangeureux pour la sant&eacute;".
+  </p>
+ 
+  <ion-item *ngFor="let beer of beers">
+  <p>Discover the beer {{beer.name}} </p> 
+   
+      <p>
+      {{beer.description}}
+      </p>
+     
+          <p>Created the {{beer.first_brewed}}</p>
+          
+          <figure style='float:left;'>
+          <img src="{{beer.image_url}}" style='width:100px;heigth:80px;'/>
+          </figure>
+    
+          <h2>Eat with this beer</h2>
+
+    </ion-item>
+    <button ion-button color="primary" menuToggle>Toggle Menu</button>
+ 
+
+</ion-content>
+
